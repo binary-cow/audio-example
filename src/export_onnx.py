@@ -19,9 +19,9 @@ from train import AudioEventDetector
 
 def main():
     parser = argparse.ArgumentParser(description="Export model to ONNX")
-    parser.add_argument("--config", type=str, default="../config.yaml")
-    parser.add_argument("--checkpoint", type=str, required=True)
-    parser.add_argument("--output", type=str, default="../model.onnx")
+    parser.add_argument("--config", type=str, default="./config.yaml")
+    parser.add_argument("--checkpoint", type=str, default='./checkpoints/best-epoch=42-val/acc=0.6125.ckpt')
+    parser.add_argument("--output", type=str, default="./model.onnx")
     args = parser.parse_args()
 
     with open(args.config) as f:
@@ -45,7 +45,7 @@ def main():
     n_frames = int(sr * duration / hop_length) + 1
     n_mels = cfg["data"]["n_mels"]
 
-    dummy_input = torch.randn(1, 1, n_mels, n_frames)
+    dummy_input = torch.randn(1, n_mels, n_frames).to(next(model.parameters()).device)  # Shape: (1, n_mels, n_frames)
 
     # ---- Export ----
     torch.onnx.export(
@@ -55,7 +55,7 @@ def main():
         input_names=["mel_spectrogram"],
         output_names=["logits"],
         dynamic_axes={
-            "mel_spectrogram": {0: "batch_size", 3: "time_frames"},
+            "mel_spectrogram": {0: "batch_size", 2: "time_frames"},
             "logits": {0: "batch_size"},
         },
         opset_version=13,

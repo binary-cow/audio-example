@@ -60,19 +60,27 @@ python evaluate.py --config ../config.yaml --checkpoint ../checkpoints/best_mode
 ```bash
 python export_onnx.py --config ../config.yaml --checkpoint ../checkpoints/best_model.pt --output ../model.onnx
 ```
-## Model Architecture
-EfficientAudioClassifier is a lightweight CNN that processes mel spectrograms using depthwise separable convolutions to minimize computational cost while maintaining classification accuracy. This makes it suitable for real-time inference and on-device deployment scenarios.
 
-Config (channels)	Parameters	Use Case
-[32, 64, 128, 256] (default)	~0.3M	Standard
-[16, 32, 64, 128]	~0.08M	Ultra-lightweight / edge
-Configuration
-All hyperparameters are controlled via config.yaml. Key options:
 
-data.n_mels: Number of mel bands (default: 128)
-model.channels: Channel widths per stage (controls model size)
-train.epochs, train.lr, train.batch_size: Training hyperparameters
-wandb.enabled: Toggle experiment tracking
+## To-Do / Roadmap
+
+- [X] ~~Revise model with pretrained encoder~~
+- [X] ~~Add WandB support~~
+
+### Data & Augmentation
+- [ ] Apply SpecAugment (time/frequency masking) 
+- [ ] Introduce further datasets (UrbanSound8K, AudioSet)
+
+### Model & Training
+- [ ] Backbone change (AST, CLAP-based)
+- [ ] Knowledge Distillation 
+
+
+### Evaluation & Analysis
+- [ ] Precision / Recall / F1 by classes
+- [ ] Confusion Matrices
+
+
 
 ## Acknowledgments
 - ESC-50 dataset by Karol J. Piczak

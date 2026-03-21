@@ -1,0 +1,108 @@
+_wandb:
+    value:
+        cli_version: 0.25.1
+        e:
+            ybn0jg4c87rbm6283hue4u9g1i7za6sf:
+                codePath: src/train.py
+                codePathLocal: src/train.py
+                cpu_count: 8
+                cpu_count_logical: 16
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "1081101176832"
+                        used: "33306247168"
+                executable: /home/mg/miniconda3/envs/esg/bin/python
+                git:
+                    commit: eb3991f3473d44379abe2fa8adf70fd48b6287c6
+                    remote: https://github.com/binary-cow/audio-example.git
+                gpu: NVIDIA GeForce RTX 4080 SUPER
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      memoryTotal: "17171480576"
+                      name: NVIDIA GeForce RTX 4080 SUPER
+                      uuid: GPU-d6d2bf93-dc83-0a12-7799-68dfcc54845a
+                host: DESKTOP-UHUO7TM
+                memory:
+                    total: "8265072640"
+                os: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+                program: /home/mg/projects/audio-example/src/train.py
+                python: CPython 3.11.14
+                root: .
+                startedAt: "2026-03-21T16:27:41.332553Z"
+                writerId: ybn0jg4c87rbm6283hue4u9g1i7za6sf
+        m:
+            - "1": trainer/global_step
+              "6":
+                - 3
+              "7": []
+            - "2": '*'
+              "5": 1
+              "6":
+                - 1
+              "7": []
+        python_version: 3.11.14
+        t:
+            "1":
+                - 1
+                - 9
+                - 41
+                - 103
+            "2":
+                - 1
+                - 9
+                - 41
+                - 103
+            "3":
+                - 7
+                - 16
+                - 66
+            "4": 3.11.14
+            "5": 0.25.1
+            "12": 0.25.1
+            "13": linux-x86_64
+data:
+    value:
+        duration: 5
+        n_mels: 128
+        root: ./data/ESC-50
+        sample_rate: 22050
+        test_folds:
+            - 5
+        train_folds:
+            - 1
+            - 2
+            - 3
+        val_folds:
+            - 4
+model:
+    value:
+        backbone_lr_factor: 0.1
+        freeze_backbone: true
+        n_classes: 50
+        unfreeze_epoch: null
+model_cfg:
+    value:
+        backbone_lr_factor: 0.1
+        freeze_backbone: true
+        n_classes: 50
+        unfreeze_epoch: null
+train:
+    value:
+        batch_size: 128
+        epochs: 50
+        lr: 0.001
+        save_dir: ./checkpoints
+        weight_decay: 0.0001
+train_cfg:
+    value:
+        batch_size: 128
+        epochs: 50
+        lr: 0.001
+        save_dir: ./checkpoints
+        weight_decay: 0.0001
+wandb:
+    value:
+        enabled: true
+        project: audio-event-detection

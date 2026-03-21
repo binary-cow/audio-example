@@ -1,0 +1,38 @@
+{
+  "os": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "CPython 3.11.14",
+  "startedAt": "2026-03-21T16:27:41.332553Z",
+  "program": "/home/mg/projects/audio-example/src/train.py",
+  "codePath": "src/train.py",
+  "codePathLocal": "src/train.py",
+  "git": {
+    "remote": "https://github.com/binary-cow/audio-example.git",
+    "commit": "eb3991f3473d44379abe2fa8adf70fd48b6287c6"
+  },
+  "root": ".",
+  "host": "DESKTOP-UHUO7TM",
+  "executable": "/home/mg/miniconda3/envs/esg/bin/python",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1081101176832",
+      "used": "33306247168"
+    }
+  },
+  "memory": {
+    "total": "8265072640"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4080 SUPER",
+      "memoryTotal": "17171480576",
+      "architecture": "Ada",
+      "uuid": "GPU-d6d2bf93-dc83-0a12-7799-68dfcc54845a"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "writerId": "ybn0jg4c87rbm6283hue4u9g1i7za6sf"
+}
