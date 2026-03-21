@@ -1,0 +1,67 @@
+/home/mg/miniconda3/envs/esg/lib/python3.11/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:881: Checkpoint directory /home/mg/projects/efficient-audio-event-detection/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name      | Type                     | Params | Mode  | FLOPs
+-----------------------------------------------------------------------
+0 | model     | EfficientAudioClassifier | 59.6 K | train | 0
+1 | criterion | CrossEntropyLoss         | 0      | train | 0
+2 | train_acc | MulticlassAccuracy       | 0      | train | 0
+3 | val_acc   | MulticlassAccuracy       | 0      | train | 0
+4 | test_acc  | MulticlassAccuracy       | 0      | train | 0
+-----------------------------------------------------------------------
+59.6 K    Trainable params
+0         Non-trainable params
+59.6 K    Total params
+0.238     Total estimated model params size (MB)
+42        Modules in train mode
+0         Modules in eval mode
+0         Total Flops
+Epoch 15:   0%| | 0/2 [00:00<?, ?it/s, v_num=9vw4, val/loss=3.540, val/acc
+/home/mg/miniconda3/envs/esg/lib/python3.11/site-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/mg/miniconda3/envs/esg/lib/python3.11/site-packages/pytorch_lightning/loops/fit_loop.py:317: The number of training batches (2) is smaller than the logging interval Trainer(log_every_n_steps=5). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+                                                                          
+Metric val/acc improved. New best score: 0.023
+Epoch 0, global step 2: 'val/acc' reached 0.02250 (best 0.02250), saving model to '/home/mg/projects/efficient-audio-event-detection/checkpoints/best-epoch=00-val/acc=0.0225.ckpt' as top 1
+Epoch 1, global step 4: 'val/acc' was not in top 1
+Epoch 2, global step 6: 'val/acc' was not in top 1
+Epoch 3, global step 8: 'val/acc' was not in top 1
+Metric val/acc improved by 0.025 >= min_delta = 0.0. New best score: 0.047
+Epoch 4, global step 10: 'val/acc' reached 0.04750 (best 0.04750), saving model to '/home/mg/projects/efficient-audio-event-detection/checkpoints/best-epoch=04-val/acc=0.0475.ckpt' as top 1
+Metric val/acc improved by 0.017 >= min_delta = 0.0. New best score: 0.065
+Epoch 5, global step 12: 'val/acc' reached 0.06500 (best 0.06500), saving model to '/home/mg/projects/efficient-audio-event-detection/checkpoints/best-epoch=05-val/acc=0.0650.ckpt' as top 1
+Epoch 6, global step 14: 'val/acc' was not in top 1
+Epoch 7, global step 16: 'val/acc' was not in top 1
+Epoch 8, global step 18: 'val/acc' was not in top 1
+Epoch 9, global step 20: 'val/acc' was not in top 1
+Epoch 10, global step 22: 'val/acc' was not in top 1
+Epoch 11, global step 24: 'val/acc' was not in top 1
+Epoch 12, global step 26: 'val/acc' was not in top 1
+Epoch 13, global step 28: 'val/acc' was not in top 1
+Epoch 14, global step 30: 'val/acc' was not in top 1
+
+Detected KeyboardInterrupt, attempting graceful shutdown ...
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7f4eaad04400>
+Traceback (most recent call last):
+  File "/home/mg/miniconda3/envs/esg/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+    self._shutdown_workers()
+  File "/home/mg/miniconda3/envs/esg/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1671, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "/home/mg/miniconda3/envs/esg/lib/python3.11/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mg/miniconda3/envs/esg/lib/python3.11/multiprocessing/popen_fork.py", line 40, in wait
+    if not wait([self.sentinel], timeout):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mg/miniconda3/envs/esg/lib/python3.11/multiprocessing/connection.py", line 940, in wait
+    with _WaitSelector() as selector:
+  File "/home/mg/miniconda3/envs/esg/lib/python3.11/selectors.py", line 202, in __exit__
+    def __exit__(self, *args):
+
+  File "/home/mg/miniconda3/envs/esg/lib/python3.11/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 33037) exited unexpectedly with exit code 1. Details are lost due to multiprocessing. Rerunning with num_workers=0 may give better error trace.
+Exception ignored in: <module 'threading' from '/home/mg/miniconda3/envs/esg/lib/python3.11/threading.py'>
+Traceback (most recent call last):
+  File "/home/mg/miniconda3/envs/esg/lib/python3.11/threading.py", line 1590, in _shutdown
+    lock.acquire()
+KeyboardInterrupt:

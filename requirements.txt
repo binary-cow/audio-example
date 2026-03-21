@@ -1,0 +1,11 @@
+torch>=2.0.0
+torchaudio>=2.0.0
+torchvision>=0.15.0
+pytorch-lightning>=2.0.0
+torchmetrics>=1.0.0
+soundfile
+numpy
+pandas
+pyyaml
+scikit-learn
+wandb

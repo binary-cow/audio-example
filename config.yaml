@@ -1,0 +1,25 @@
+data:
+  root: "./data/ESC-50"
+  sample_rate: 22050
+  duration: 5
+  n_mels: 128
+  train_folds: [1, 2, 3]
+  val_folds: [4]
+  test_folds: [5]
+
+model:
+  n_classes: 50
+  freeze_backbone: true
+  unfreeze_epoch:        # null to keep frozen entire training
+  backbone_lr_factor: 0.1   # backbone LR = lr * this factor when unfrozen
+
+train:
+  epochs: 50
+  batch_size: 128
+  lr: 0.001
+  weight_decay: 0.0001
+  save_dir: "./checkpoints"
+
+wandb:
+  enabled: true
+  project: "audio-event-detection"

@@ -1,0 +1,20 @@
+2026-03-22 00:13:35,265 INFO    MainThread:34405 [wandb_setup.py:_flush():81] Current SDK version is 0.25.1
+2026-03-22 00:13:35,265 INFO    MainThread:34405 [wandb_setup.py:_flush():81] Configure stats pid to 34405
+2026-03-22 00:13:35,265 INFO    MainThread:34405 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-03-22 00:13:35,265 INFO    MainThread:34405 [wandb_init.py:setup_run_log_directory():717] Logging user logs to wandb/run-20260322_001335-f9xi3h15/logs/debug.log
+2026-03-22 00:13:35,266 INFO    MainThread:34405 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to wandb/run-20260322_001335-f9xi3h15/logs/debug-internal.log
+2026-03-22 00:13:35,266 INFO    MainThread:34405 [wandb_init.py:init():844] calling init triggers
+2026-03-22 00:13:35,266 INFO    MainThread:34405 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'data': {'root': './data/ESC-50', 'sample_rate': 22050, 'duration': 5, 'n_mels': 128, 'train_folds': [1, 2, 3], 'val_folds': [4], 'test_folds': [5]}, 'model': {'n_classes': 50, 'freeze_backbone': True, 'unfreeze_epoch': None, 'backbone_lr_factor': 0.1}, 'train': {'epochs': 50, 'batch_size': 128, 'lr': 0.001, 'weight_decay': 0.0001, 'save_dir': './checkpoints'}, 'wandb': {'enabled': True, 'project': 'audio-event-detection'}, '_wandb': {}}
+2026-03-22 00:13:35,266 INFO    MainThread:34405 [wandb_init.py:init():892] starting backend
+2026-03-22 00:13:35,582 INFO    MainThread:34405 [wandb_init.py:init():895] sending inform_init request
+2026-03-22 00:13:35,586 INFO    MainThread:34405 [wandb_init.py:init():903] backend started and connected
+2026-03-22 00:13:35,589 INFO    MainThread:34405 [wandb_init.py:init():973] updated telemetry
+2026-03-22 00:13:35,590 INFO    MainThread:34405 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-03-22 00:13:46,663 INFO    MainThread:34405 [wandb_init.py:init():1042] starting run threads in backend
+2026-03-22 00:13:46,861 INFO    MainThread:34405 [wandb_run.py:_console_start():2524] atexit reg
+2026-03-22 00:13:46,862 INFO    MainThread:34405 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-03-22 00:13:46,862 INFO    MainThread:34405 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-03-22 00:13:46,863 INFO    MainThread:34405 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-03-22 00:13:46,869 INFO    MainThread:34405 [wandb_init.py:init():1082] run started, returning control to user process
+2026-03-22 00:13:46,959 INFO    MainThread:34405 [wandb_run.py:_config_callback():1403] config_cb None None {'model_cfg': {'n_classes': 50, 'freeze_backbone': True, 'unfreeze_epoch': None, 'backbone_lr_factor': 0.1}, 'train_cfg': {'epochs': 50, 'batch_size': 128, 'lr': 0.001, 'weight_decay': 0.0001, 'save_dir': './checkpoints'}}

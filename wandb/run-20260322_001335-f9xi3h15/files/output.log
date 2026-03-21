@@ -1,0 +1,20 @@
+/home/mg/miniconda3/envs/esg/lib/python3.11/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:881: Checkpoint directory /home/mg/projects/efficient-audio-event-detection/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name      | Type               | Params | Mode  | FLOPs
+-----------------------------------------------------------------
+0 | model     | AudioClassifier    | 4.7 M  | train | 0
+1 | criterion | CrossEntropyLoss   | 0      | train | 0
+2 | train_acc | MulticlassAccuracy | 0      | train | 0
+3 | val_acc   | MulticlassAccuracy | 0      | train | 0
+4 | test_acc  | MulticlassAccuracy | 0      | train | 0
+-----------------------------------------------------------------
+681 K     Trainable params
+4.0 M     Non-trainable params
+4.7 M     Total params
+18.754    Total estimated model params size (MB)
+344       Modules in train mode
+0         Modules in eval mode
+0         Total Flops
+Sanity Checking DataLoader 0:   0%|                 | 0/2 [00:00<?, ?it/s]Backend tkagg is interactive backend. Turning interactive mode on.
+/home/mg/miniconda3/envs/esg/lib/python3.11/site-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.

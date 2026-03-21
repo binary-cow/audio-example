@@ -1,0 +1,25 @@
+/home/mg/miniconda3/envs/esg/lib/python3.11/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:881: Checkpoint directory /home/mg/projects/efficient-audio-event-detection/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name      | Type                     | Params | Mode  | FLOPs
+-----------------------------------------------------------------------
+0 | model     | EfficientAudioClassifier | 59.6 K | train | 0
+1 | criterion | CrossEntropyLoss         | 0      | train | 0
+2 | train_acc | MulticlassAccuracy       | 0      | train | 0
+3 | val_acc   | MulticlassAccuracy       | 0      | train | 0
+4 | test_acc  | MulticlassAccuracy       | 0      | train | 0
+-----------------------------------------------------------------------
+59.6 K    Trainable params
+0         Non-trainable params
+59.6 K    Total params
+0.238     Total estimated model params size (MB)
+42        Modules in train mode
+0         Modules in eval mode
+0         Total Flops
+Epoch 2: 100%|█| 10/10 [00:05<00:00,  1.98it/s, v_num=1m7p, val/loss=3.860
+/home/mg/miniconda3/envs/esg/lib/python3.11/site-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+Validation: |                                       | 0/? [00:00<?, ?it/s]
+Metric val/acc improved. New best score: 0.032
+Epoch 0, global step 10: 'val/acc' reached 0.03250 (best 0.03250), saving model to '/home/mg/projects/efficient-audio-event-detection/checkpoints/best-epoch=00-val/acc=0.0325.ckpt' as top 1
+Metric val/acc improved by 0.015 >= min_delta = 0.0. New best score: 0.047
+Epoch 1, global step 20: 'val/acc' reached 0.04750 (best 0.04750), saving model to '/home/mg/projects/efficient-audio-event-detection/checkpoints/best-epoch=01-val/acc=0.0475.ckpt' as top 1

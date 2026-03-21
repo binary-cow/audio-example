@@ -1,0 +1,6 @@
+# this is gitignore. for example: 
+./data
+./lightning_logs
+./checkpoints
+./__pycache__
+./vscode
