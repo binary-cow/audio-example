@@ -20,7 +20,7 @@ This pipeline uses [ESC-50](https://github.com/karolpiczak/ESC-50) (Environmenta
 
 ## Project Structure
 
-
+```
 ├── config.yaml # Experiment configuration (data, model, training)
 ├── requirements.txt # Python dependencies
 ├── scripts/
@@ -31,8 +31,8 @@ This pipeline uses [ESC-50](https://github.com/karolpiczak/ESC-50) (Environmenta
 ├── train.py # Training loop with W&B logging
 ├── evaluate.py # Evaluation with classification report
 └── export_onnx.py # ONNX model export for deployment
+```
 
-basic
 
 ## Quick Start
 
